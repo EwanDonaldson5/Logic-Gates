@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Link to the style sheets-->
+    <link rel="stylesheet" href="Style_Sheets/styles.css">
+    <link rel="stylesheet" href="Style_Sheets/buttonStyles.css">
+    <link rel="stylesheet" href="Style_Sheets/navbarStyles.css">
+    <link rel="stylesheet" href="Style_Sheets/animationStyles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!--Link to bootstrap java script and local java script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="JavaScript/Scripts.js"></script>
+
+    <title>AND Gate</title><!--The title for the web page-->
+    <!--Applys a grdient color to the div 'background'-->
+    <style>#background {min-height:100vh;background-color:#F5F5F5;background-image:linear-gradient(to bottom right,#F5F5F5,#DADADA);}</style>
+  </head>
+  <body>
+
+    <div id="mySidebar" class="sidebar"><!--Div holding the navigation bar-->
+      <button class="buttonCustom buttonNavShow buttonFixed" onclick="closeNav()" style="position:absolute;text-align:center;">&times;</button><!--button to close the navbar-->
+      <a href="index.html"><h3 class="text" style="text-align:right">Home</h3></a><!--link to the home page-->
+      <hr class="line" style="margin-top:-15px">
+      <a href="#"><h3 class="text" style="margin-top:-20px;font-size:20px;text-align:right">AND Gate</h3></a>
+      <hr class="line" style="margin-top:-15px">
+      <a href="OR.html"><h3 class="text" style="margin-top:-20px;font-size:20px;text-align:right">OR Gate</h3></a><!--link to relevant page-->
+      <hr class="line" style="margin-top:-15px">
+      <a href="NAND.html"><h3 class="text" style="margin-top:-20px;font-size:20px;text-align:right">NAND Gate</h3></a><!--link to relevant page-->
+      <hr class="line" style="margin-top:-15px">
+      <a hred="NOR.html"><h3 class="text" style="margin-top:-20px;font-size:20px;text-align:right">NOR Gate</h3></a><!--link to relevant page-->
+      <hr class="line" style="margin-top:-15px">
+    </div>
+
+    <button class="buttonCustom buttonNavShow buttonFixed" onclick="openNav()">&#9776;</button><!--button used to toggle the navbar-->
+   
+    <div id="background"><!--Defines the entire window in a div called background-->
+
+      <div class="container" style="margin-right:1%;"><!--Container holding the page contents. Margin is for styling purposes-->
+        <div class="row">
+          <div class="col-xs-1 col-sm-1 col-lg-1"></div><!--empty column implemented for styling purposes-->
+          <div class="col-xs-11 col-sm-11 col-lg-11 content"><!--section for code and docs-->
+            <div id="imageDisplay" style="display:block"><!--individual div, by default is displayed-->
+              <button onclick="return show();" class="buttonContentToggle buttonCustom">Show Test</button><!--button used to display docs-->
+              <h2 class="header">AND Gate</h2><!--Header for the section-->
+              <div class="image">
+                <img class="image" src="Images/ANDGate.png" placeholder="Logic Gate: AND">
+              </div>
+              <div><!--Description for the page-->
+                <p class="description">The AND gate takes in two values and compares them, if both positive then the output is also positive.</p>
+              </div>
+            </div>
+
+            <div id="docDisplay" style="display:none"><!--individual div, by default is hidden-->
+              <button onclick="return hide();" class="buttonContentToggle buttonCustom">Show Desc</button><!--button used to display code-->
+              <h2 class="header">TESTS</h2><!--header for the section-->
+              <div style="width:100%;">
+                <p style="text-decoration:underline">Provide the output for the following questions:</p>
+                <table>
+                  <tr>
+                    <td class="question">
+                      <p>The output from: 0 AND 1</p>
+                    </td>
+                    <td class="answer">
+                      <p><input id="AND_question1_inputbox" class="form-control inputboxCustom" placeholder="answer" style="display:inline;font-size:inherit"></p>
+                    </td>
+                    <td class="result">
+                      <canvas id="ANDcanvas1" width="75" height="75"></canvas>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="question">
+                      <p>The output from: 0 AND 0</p>
+                    </td>
+                    <td class="answer">
+                      <p><input id="AND_question2_inputbox" class="form-control inputboxCustom" placeholder="answer" style="display:inline;font-size:inherit"></p>
+                    </td>
+                    <td class="result">
+                      <canvas id="ANDcanvas2" width="75" height="75"></canvas>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="question">
+                      <p>The output from: 1 AND 1</p>
+                    </td>
+                    <td class="answer">
+                      <p><input id="AND_question3_inputbox" class="form-control inputboxCustom" placeholder="answer" style="display:inline;font-size:inherit"></p>
+                    </td>
+                    <td class="result">
+                      <canvas id="ANDcanvas3" width="75" height="75"></canvas>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <button class="buttonContentToggle buttonCustom" onclick="ANDsubmitAnswers()">Submit Answers</button>
+            </div>
+            
+
+            <div class="hotBar">
+              <table style="width:100%">
+                <tr>
+                  <td style="padding-right:5%">
+                    <a href="#">
+                      <button class="buttonContentToggle buttonCustom" style="color:#111;float:right;">&#171; Prev</button>
+                    </a>
+                  </td>
+                  <td style="padding-left:5%">
+                    <a href="OR.html">
+                      <button onclick="" class="buttonContentToggle buttonCustom" style="color:#111;float:left;">Next &#187;</button>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+        
+
+    </div>
+  </body>
+</html> 

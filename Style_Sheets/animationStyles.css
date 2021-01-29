@@ -1,0 +1,18 @@
+/*Style used for the canvases being used to output the tick or cross*/
+#ANDcanvas {
+  padding-left:10%;
+}
+
+/*Styles used for the displaying of the tests*/
+.question {
+  width:50%;
+}
+
+.answer {
+  width:25%;
+}
+
+.result {
+  width:25%;
+}
+  

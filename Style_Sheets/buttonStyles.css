@@ -1,0 +1,49 @@
+.buttonHomeImage {
+	transition-duration: 0.4s; 
+	background-color: #d9d9d9;
+  	margin-bottom:5px;
+  	border-style:none;
+}
+
+.buttonCustom {
+	transition-duration: 0.4s; 
+	background-color: #d9d9d9;
+  	margin-bottom:5px;
+  	border-radius:10px;
+  	border: 2px solid #404040;
+  	box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 1), 0 6px 40px 0 rgba(0, 0, 0, 0.19);
+  	text-align:center;
+}
+
+.buttonCustom:hover {
+	background-color: #696969;
+	margin-bottom:5px;
+}
+
+.buttonFixed {
+	position:fixed;
+}
+
+.buttonNavShow {
+	top:5px;
+	left:5px;
+	width:5vw;
+	height:5vw;
+	font-size:2.5vw;
+	min-width:35px;
+	min-height:35px;
+}
+
+.buttonContentToggle {
+	float:right;
+}
+
+.buttonRounded {
+	border-radius:100px;
+	width:10vh;
+	height:10vh;
+}
+
+.buttonFloat{
+	float:middle;
+}
